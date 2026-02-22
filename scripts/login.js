@@ -5,7 +5,7 @@ document.getElementById("login-btn").addEventListener("click", function (event) 
 
     if (accountNumber.length == 11) {
         if (parseInt(pin) === 1234) {
-            window.location.href = "./main.html"
+            window.location.href = "./main.html";
         } else {
             alert("Wrong PIN");
         }
