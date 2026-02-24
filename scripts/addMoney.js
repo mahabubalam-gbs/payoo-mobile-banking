@@ -1,14 +1,17 @@
 document.getElementById("add-money-btn").addEventListener("click", function (event) {
     event.preventDefault();
-    const accountNumber = document.getElementById("account-number").value;
-    const pinNumber = document.getElementById("pin").value;
-    const amount = document.getElementById("amount").value;
-    const mainBalance = document.getElementById("main-balance").innerText;
+    const accountNumber = getInputValueById("account-number");
+    const pinNumber = getInputValueById("pin");
+    const amount = getInputValueById("amount");
+    const mainBalance = getInnerTextById("main-balance");
 
-    if (accountNumber.length == 11) {
-        if (parseInt(pinNumber) === 1234) {
-            let sum = parseFloat(mainBalance) + parseFloat(amount)
-            document.getElementById("main-balance").innerText = sum;
+    if (accountNumber.toString().length == 10) {
+        if (pinNumber === 1234) {
+            let sum = mainBalance + amount;
+            setInnerTextByIdAndValue("main-balance", sum);
+            setInputFieldEmpty("account-number");
+            setInputFieldEmpty("amount");
+            setInputFieldEmpty("pin");
         } else {
             alert("Wrong Pin Number")
         }
