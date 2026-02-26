@@ -5,6 +5,11 @@ document.getElementById("add-money-btn").addEventListener("click", function (eve
     const amount = getInputValueById("amount");
     const mainBalance = getInnerTextById("main-balance");
 
+    if (amount < 0) {
+        alert("Invalid Amount");
+        return;
+    }
+
     if (accountNumber.length == 11) {
         if (pinNumber === 1234) {
             let sum = mainBalance + amount;

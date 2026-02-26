@@ -75,7 +75,7 @@
                     <h3>Cashout</h3>
                 </div>
                 <!-- card 3 -->
-                <div
+                <div id="transfer-money-card"
                     class="card border border-gray-400 rounded-xl p-4 text-center hover:border-payoo-blue cursor-pointer hover:bg-payoo-blue/5 hover:text-payoo-blue gap-2">
                     <img class="w-8 mx-auto" src="assets/opt-3.png" alt="">
                     <h3>Transfer Money</h3>
@@ -108,28 +108,30 @@
                 <div class="hero-content">
                     <div class="card bg-base-100 shadow-2xl rounded-2xl min-w-[350px]">
                         <form class="card-body">
-                            <legend class="font-medium text-gray-600">Select A Bank</legend>
-                            <select class="select outline-none">
-                                <option disabled selected>Select Bank</option>
-                                <option value="bkash">Bkash</option>
-                                <option value="nagad">Nagad</option>
-                                <option value="rocket">Rocket</option>
-                                <option value="upay">Upay</option>
-                                <option value="cellphin">Cellphin</option>
-                                <option value="sure-cash">Sure-Cash</option>
-                                <option value="sonali sheba">Sonali Sheba</option>
-                            </select>
                             <fieldset class="fieldset">
+                                <legend class="font-medium text-gray-600">Select A Bank</legend>
+                                <select class="select outline-none" required>
+                                    <option value="" disabled selected>Select Bank</option>
+                                    <option value="bkash">Bkash</option>
+                                    <option value="nagad">Nagad</option>
+                                    <option value="rocket">Rocket</option>
+                                    <option value="upay">Upay</option>
+                                    <option value="cellphin">Cellfin</option>
+                                    <option value="sure-cash">Sure-Cash</option>
+                                    <option value="sonali sheba">Sonali Sheba</option>
+                                </select>
+
                                 <label class="label font-medium text-gray-600">Bank Account Number</label>
-                                <input id="account-number" type="text" maxlength="11" class="input focus:outline-none"
+                                <input id="account-number" type="number" maxlength="11" class="input focus:outline-none"
                                     placeholder="Enter 11 digit account number" required />
                                 <label class="label font-medium text-gray-600">Amount to Add</label>
                                 <input id="amount" type="text" class="input focus:outline-none"
                                     placeholder="Enter amount to add" required />
                                 <label class="label font-medium text-gray-600">Pin Number</label>
-                                <input id="pin" type="text" class="input focus:outline-none" maxlength="4"
+                                <input id="pin" type="number" class="input focus:outline-none" maxlength="4"
                                     placeholder="Enter 4 digit pin number" required />
-                                <button id="add-money-btn" class="btn btn-primary rounded-full mt-4">Add Money</button>
+                                <button type="submit" id="add-money-btn" class="btn btn-primary rounded-full mt-4">Add
+                                    Money</button>
                             </fieldset>
                         </form>
                     </div>
@@ -156,6 +158,32 @@
                                     placeholder="Enter 4 digit pin number" required />
                                 <button id="cashout-btn" class="btn btn-primary rounded-full mt-4">Withdraw
                                     Money</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transfer money section -->
+        <section id="transfer" class="py-6">
+            <h2 class="px-6 font-bold">Transfer Money</h2>
+            <div class="hero">
+                <div class="hero-content">
+                    <div class="card bg-base-100 shadow-2xl rounded-2xl min-w-[350px]">
+                        <form class="card-body">
+                            <fieldset class="fieldset">
+                                <label class="label font-medium text-gray-600">User Account Number</label>
+                                <input id="transfer-account" type="text" maxlength="11" class="input focus:outline-none"
+                                    placeholder="Enter 11 digit number" required />
+                                <label class="label font-medium text-gray-600">Amount</label>
+                                <input id="transfer-amount" type="text" class="input focus:outline-none"
+                                    placeholder="Enter amount to transfer" required />
+                                <label class="label font-medium text-gray-600">Pin Number</label>
+                                <input id="transfer-pin" type="text" class="input focus:outline-none" maxlength="4"
+                                    placeholder="Enter 4 digit pin number" required />
+                                <button id="transfer-btn" class="btn btn-primary rounded-full mt-4">Send
+                                    Now</button>
                             </fieldset>
                         </form>
                     </div>
