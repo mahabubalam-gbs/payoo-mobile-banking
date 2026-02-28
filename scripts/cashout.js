@@ -8,8 +8,8 @@ document.getElementById("cashout-btn").addEventListener("click", function (event
     if (accountNumber.length == 11) {
         if (pinNumber === 1234) {
             if (amount <= mainBalance) {
-                let sum = mainBalance - amount;
-                setInnerTextByIdAndValue("main-balance", sum);
+                let newBalance = mainBalance - amount;
+                setInnerTextByIdAndValue("main-balance", newBalance);
                 setInputFieldEmpty("cashout-account");
                 setInputFieldEmpty("cashout-amount");
                 setInputFieldEmpty("cashout-pin");

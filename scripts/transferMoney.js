@@ -8,8 +8,8 @@ document.getElementById("transfer-btn").addEventListener("click", function (even
     if (accountNumber.length == 11) {
         if (pinNumber === 1234) {
             if (amount <= mainBalance) {
-                let sum = mainBalance - amount;
-                setInnerTextByIdAndValue("main-balance", sum);
+                let newBalance = mainBalance - amount;
+                setInnerTextByIdAndValue("main-balance", newBalance);
                 setInputFieldEmpty("transfer-account");
                 setInputFieldEmpty("transfer-amount");
                 setInputFieldEmpty("transfer-pin");

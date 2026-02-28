@@ -81,7 +81,7 @@
                     <h3>Transfer Money</h3>
                 </div>
                 <!-- card 4 -->
-                <div
+                <div id="get-bonus-card"
                     class="card border border-gray-400 rounded-xl p-4 text-center hover:border-payoo-blue cursor-pointer hover:bg-payoo-blue/5 hover:text-payoo-blue gap-2">
                     <img class="w-8 mx-auto" src="assets/opt-4.png" alt="">
                     <h3>Get Bonus</h3>
@@ -190,6 +190,27 @@
                 </div>
             </div>
         </section>
+
+        <!-- Get bonus section -->
+        <section id="bonus" class="py-6">
+            <h2 class="px-6 font-bold">Get Bonus</h2>
+            <div class="hero">
+                <div class="hero-content">
+                    <div class="card bg-base-100 shadow-2xl rounded-2xl min-w-[350px]">
+                        <form class="card-body">
+                            <fieldset class="fieldset">
+                                <label class="label font-medium text-gray-600">Enter Bonus Coupon</label>
+                                <input id="coupon" type="text" class="input focus:outline-none"
+                                    placeholder="Enter your coupon" required />
+                                <button id="bonus-btn" class="btn btn-primary rounded-full mt-4">Get
+                                    Bonus</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </section>
 
     <script src="scripts/utilities.js"></script>
@@ -197,6 +218,7 @@
     <script src="scripts/addMoney.js"></script>
     <script src="scripts/cashout.js"></script>
     <script src="scripts/transferMoney.js"></script>
+    <script src="scripts/getBonus.js"></script>
 </body>
 
 </html>
