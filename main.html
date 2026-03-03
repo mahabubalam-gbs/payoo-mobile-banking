@@ -87,7 +87,7 @@
                     <h3>Get Bonus</h3>
                 </div>
                 <!-- card 5 -->
-                <div
+                <div id="pay-bill-card"
                     class="card border border-gray-400 rounded-xl p-4 text-center hover:border-payoo-blue cursor-pointer hover:bg-payoo-blue/5 hover:text-payoo-blue gap-2">
                     <img class="w-8 mx-auto" src="assets/opt-5.png" alt="">
                     <h3>Pay Bill</h3>
@@ -111,14 +111,14 @@
                             <fieldset class="fieldset">
                                 <legend class="font-medium text-gray-600">Select A Bank</legend>
                                 <select class="select outline-none" required>
-                                    <option value="" disabled selected>Select Bank</option>
-                                    <option value="bkash">Bkash</option>
-                                    <option value="nagad">Nagad</option>
-                                    <option value="rocket">Rocket</option>
-                                    <option value="upay">Upay</option>
-                                    <option value="cellphin">Cellfin</option>
-                                    <option value="sure-cash">Sure-Cash</option>
-                                    <option value="sonali sheba">Sonali Sheba</option>
+                                    <option value="" disabled selected>Select Back</option>
+                                    <option value="Bkash">Bkash</option>
+                                    <option value="Nagad">Nagad</option>
+                                    <option value="Rocket">Rocket</option>
+                                    <option value="Upay">Upay</option>
+                                    <option value="Cellphin">Cellfin</option>
+                                    <option value="Sure-Cash">Sure-Cash</option>
+                                    <option value="Sonali Sheba">Sonali Sheba</option>
                                 </select>
 
                                 <label class="label font-medium text-gray-600">Bank Account Number</label>
@@ -204,6 +204,43 @@
                                     placeholder="Enter your coupon" required />
                                 <button id="bonus-btn" class="btn btn-primary rounded-full mt-4">Get
                                     Bonus</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- pay bill section -->
+        <section id="paybill" class="py-6">
+            <h2 class="px-6 font-bold">Pay Bill</h2>
+            <div class="hero">
+                <div class="hero-content">
+                    <div class="card bg-base-100 shadow-2xl rounded-2xl min-w-[350px]">
+                        <form class="card-body">
+                            <fieldset class="fieldset">
+                                <legend class="font-medium text-gray-600">Select To Pay</legend>
+                                <select class="select outline-none" required>
+                                    <option value="" disabled selected>Select Back</option>
+                                    <option value="Electricy Bill">Electricy Bill</option>
+                                    <option value="Wasa Bill">Wasa Bill</option>
+                                    <option value="Gas Bill">Gas Bill</option>
+                                    <option value="School Fees">School Fees</option>
+                                    <option value="College Fees">College Fees</option>
+                                    <option value="University Fees">University Fees</option>
+                                </select>
+
+                                <label class="label font-medium text-gray-600">Biller Account Number</label>
+                                <input id="paybill-account" type="number" maxlength="11"
+                                    class="input focus:outline-none" placeholder="Enter account number" required />
+                                <label class="label font-medium text-gray-600">Amount to pay</label>
+                                <input id="paybill-amount" type="text" class="input focus:outline-none"
+                                    placeholder="Enter amount to add" required />
+                                <label class="label font-medium text-gray-600">Pin Number</label>
+                                <input id="paybill-pin" type="number" class="input focus:outline-none" maxlength="4"
+                                    placeholder="Enter 4 digit pin number" required />
+                                <button type="submit" id="pay-bill-btn" class="btn btn-primary rounded-full mt-4">Pay
+                                    Now</button>
                             </fieldset>
                         </form>
                     </div>
